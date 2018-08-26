@@ -1,0 +1,23 @@
+$designWidth: 750;
+$dirs:( "t": "top", "r": "right", "b": "bottom", "l": "left");
+$colors:( "w":white, "g":#ccc, "b": #018ee1, "r":#fb6363);
+$fontSizes:(28, 35);
+$hights:(90, 148, 338);
+$widths:(230, 330);
+$pmSizes:(10, 20, 30, 36, 40, 60);
+@function px2rem($px) {
+    @return $px/100+rem;
+}
+
+@mixin wh($w, $h) {
+    width: px2rem($w);
+    height: px2rem($h);
+}
+
+@import 'reset.scss';
+@import 'flex.scss';
+// @import 'float.scss';
+// @import 'grid.scss';
+@import 'position.scss';
+@import 'font.scss';
+@import 'box.scss';

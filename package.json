@@ -1,0 +1,18 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "normalize.css": "^8.0.0",
+    "sass-loader": "^7.1.0",
+    "scss-flex": "^1.6.4",
+    "vue-amap": "^0.5.8"
+  }
+}

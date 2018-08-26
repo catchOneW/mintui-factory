@@ -1,0 +1,67 @@
+ @each $px in $fontSizes {
+     .fs#{$px} {
+         font-size: px2rem($px);
+     }
+ }
+
+ @each $alis,
+ $color in $colors {
+     .color-#{$alis} {
+         color: $color;
+     }
+ }
+
+ @each $alis,
+ $color in $colors {
+     .bg-#{$alis} {
+         background: $color;
+     }
+ }
+
+ .tac {
+     text-align: center;
+ }
+
+ .tar {
+     text-align: right;
+ }
+
+ .vam {
+     vertical-align: middle;
+ }
+
+ .wsn {
+     white-space: nowrap;
+ }
+
+ .toe {
+     text-overflow: ellipsis;
+ }
+
+ .line1 {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 1;
+     -webkit-box-orient: vertical;
+ }
+
+ .line2 {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 2;
+     -webkit-box-orient: vertical;
+ }
+
+ .ti2 {
+     text-indent: 2em;
+ }
+
+ .lc2 {
+     -webkit-line-clamp: 2;
+ }
+
+ body {
+     word-break: break-all;
+ }

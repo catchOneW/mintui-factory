@@ -1,0 +1,121 @@
+ @for $n from 1 to 12 {
+     .col#{$n} {
+         width: $n*100/12#{'%'};
+         box-sizing: border-box;
+     }
+ }
+
+ @each $px in $hights {
+     .h#{$px} {
+         height: px2rem($px);
+     } //  .lh#{$px} {
+     //      line-height: px2rem($px);
+     //  }
+     //  .wh#{$px} {
+     //      width: px2rem($px);
+     //      height: px2rem($px);
+     //  }
+ }
+
+ @each $px in $widths {
+     .w#{$px} {
+         width: px2rem($px);
+     }
+ }
+
+ @each $px in $pmSizes {
+     .pd#{$px} {
+         padding: px2rem($px);
+     }
+     .pdtb#{$px} {
+         padding: px2rem($px) 0;
+     }
+     .pdlr#{$px} {
+         padding: 0 px2rem($px);
+     }
+ }
+
+ @each $alis,
+ $dir in $dirs {
+     @each $px in $pmSizes {
+         .m#{$alis}#{$px} {
+             margin-#{$dir}: px2rem($px);
+         }
+         .pd#{$alis}#{$px} {
+             padding-#{$dir}: px2rem($px);
+         }
+     }
+ }
+
+ @each $alis,
+ $dir in $dirs {
+     .m#{$alis}a {
+         margin-#{$dir}: auto;
+     }
+ }
+
+ .ma {
+     margin: auto;
+ }
+
+ .mlra {
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .mtba {
+     margin-top: auto;
+     margin-bottom: auto;
+ }
+
+ .h100p {
+     height: 100%;
+ }
+
+ .w100p {
+     width: 100%;
+ }
+
+ .wh100p {
+     width: 100%;
+     height: 100%;
+ }
+
+ .bsbb {
+     box-sizing: border-box;
+ }
+
+ .dib {
+     display: inline-block;
+ }
+
+ .oh {
+     overflow: hidden;
+ }
+
+ .bd {
+     border: 1px solid #ccc;
+ }
+
+ @each $alis,
+ $dir in $dirs {
+     .bd#{$alis} {
+         border-#{$dir}: 1px solid #ccc;
+     }
+ }
+
+ .bs5 {
+     box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+ }
+
+ .bdr5 {
+     border-radius: 5px;
+ }
+
+ .bdr10 {
+     border-radius: 10px;
+ }
+
+ .wh100 {
+     @include wh(100, 100)
+ }
